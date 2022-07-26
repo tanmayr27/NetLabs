@@ -1,0 +1,27 @@
+package swap_1;
+
+public class second {
+
+	public static void main(String[] args) {
+		int arr[]= {1,2,3,4,5,6,7,8,9,10};
+		int result=second(arr);
+		System.out.println(result);
+
+	}
+public static int second(int a[])
+{
+	int max=a[0];
+	for(int i=0;i<a.length;i++)
+	{
+		if(a[i]>max)
+			max=a[i];
+	}
+	int max2=Integer.MIN_VALUE;
+	for(int i=0;i<a.length;i++)
+	{
+		if((a[i]>max2)&&(a[i]!=max))
+			max2=a[i];
+	}
+	return max2;
+}
+}
